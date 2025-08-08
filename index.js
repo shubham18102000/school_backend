@@ -10,8 +10,8 @@ const app = express();
 // CORS setup
 app.use(cors({
   origin: [
-    "http://localhost:5173", // local dev
-    "https://your-frontend-domain.vercel.app", // production
+    "http://localhost:5173",  // local development
+    "https://sspsrosera.com", // production site
   ],
   credentials: true,
 }));
