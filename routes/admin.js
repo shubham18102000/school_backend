@@ -49,4 +49,16 @@ router.post("/reject/:id", verifyToken, async (req, res) => {
   res.json({ message: "Deleted" });
 });
 
+// GET: All testimonials (Admin only)
+router.get("/all", verifyToken, async (req, res) => {
+  try {
+    const allTestimonials = await Testimonial.find().sort({ createdAt: -1 });
+    res.json(allTestimonials);
+  } catch (err) {
+    console.error("Error fetching all testimonials:", err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+
 module.exports = router;
