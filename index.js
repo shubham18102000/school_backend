@@ -11,7 +11,8 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",  // local development
-    "https://sspsrosera.com", // production site
+    "https://sspsrosera.com",// production site
+    "https://www.sspsrosera.com" // production site
   ],
   credentials: true,
 }));
